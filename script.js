@@ -15,29 +15,29 @@ console.log(`2. The area of the rectangle is ${area} square units.`);
 // Checking voting eligiblity based on age.
 let age = Number(prompt("Enter your age:"));
 if (age >= 18) {
-  console.log("3. You are eligible to vote.");
-} else {
-  console.log("3. You are not eligible to vote.");
+    console.log("3. You are eligible to vote.");
+    } else {
+    console.log("3. You are not eligible to vote.");
 }
 
 
 // Checking passed or failed based on grade.
 let grade = Number(prompt("Enter your grade percentage:"));
 if (grade >= 60) {
-  console.log("4. You passed.");
-} else {
-  console.log("4. You failed.");
+    console.log("4. You passed.");
+    } else {
+    console.log("4. You failed.");
 }
 
 
 // Checking the number is positive, negative, or zero.
 let num = Number(prompt("Enter a number to check (+,-,0):"));
 if (num > 0) {
-  console.log("5. The number is positive.");
-} else if (num < 0) {
-  console.log("5. The number is negative.");
-} else {
-  console.log("5. The number is zero.");
+    console.log("5. The number is positive.");
+    } else if (num < 0) {
+    console.log("5. The number is negative.");
+    } else {
+    console.log("5. The number is zero.");
 }
 
 
