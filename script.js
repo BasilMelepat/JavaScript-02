@@ -1,19 +1,19 @@
 // Finding sum of two numbers.
-let num1 = Number(prompt("Enter the first number:")); 
-let num2 = Number(prompt("Enter the second number:"));
+let num1 = Number(prompt("1. Enter the first number:")); 
+let num2 = Number(prompt("1. Enter the second number:"));
 let sum = num1+num2;
 console.log(`1. The sum of ${num1} and ${num2} is: ${sum}`);
 
 
 // Finding area of a rectangle.
-const length = Number(prompt("Enter the length of the rectangle:"));
-const width = Number(prompt("Enter the width of the rectangle:"));
+const length = Number(prompt("2. Enter the length of the rectangle:"));
+const width = Number(prompt("2. Enter the width of the rectangle:"));
 const area = length*width;
 console.log(`2. The area of the rectangle is ${area} square units.`);
 
 
 // Checking voting eligiblity based on age.
-let age = Number(prompt("Enter your age:"));
+let age = Number(prompt("3. Enter your age:"));
 if (age >= 18) {
     console.log("3. You are eligible to vote.");
     } else {
@@ -22,7 +22,7 @@ if (age >= 18) {
 
 
 // Checking passed or failed based on grade.
-let grade = Number(prompt("Enter your grade percentage:"));
+let grade = Number(prompt("4. Enter your grade percentage:"));
 if (grade >= 60) {
     console.log("4. You passed.");
     } else {
@@ -31,7 +31,7 @@ if (grade >= 60) {
 
 
 // Checking the number is positive, negative, or zero.
-let num = Number(prompt("Enter a number to check (+,-,0):"));
+let num = Number(prompt("5. Enter a number to check (+,-,0):"));
 if (num > 0) {
     console.log("5. The number is positive.");
     } else if (num < 0) {
@@ -42,7 +42,7 @@ if (num > 0) {
 
 
 // Checking the user is a child, teenager, adult, or senior based on age.
-let userAge = Number(prompt("Enter your age:")); 
+let userAge = Number(prompt("6. Enter your age:")); 
 if (userAge>=0 && userAge<=12) {
     console.log("6. You are a child.");
     } else if (userAge>=13 && userAge<=19) {
@@ -57,7 +57,7 @@ if (userAge>=0 && userAge<=12) {
 
 
 // Find the square of each number in an array using a loop.
-let input = prompt("Enter numbers separated by commas:");
+let input = prompt("7. Enter numbers separated by commas:");
 if (!input) {
     alert("You didn't answer.. moving to next question");
     }
@@ -81,7 +81,7 @@ if (!input) {
 
 
 // Program to find the sum of all the odd numbers for a given limit.
-let limit = Number(prompt("Enter the limit:"));
+let limit = Number(prompt("8. Enter the limit:"));
 let oddSum = 0;
 for (let i = 1; i <= limit; i++) {
     if (i % 2 !== 0) {
