@@ -17,8 +17,9 @@ console.log(calculateFactorial(5));
 // 2. Function to a variable called doubleArray.
 const doubleArray = function(arr) {
     return arr.map(num => num * 2);
-};
-console.log("Double [1, 2, 3, 4]:", doubleArray([1, 2, 3, 4]));
+}
+console.log("doubleArray of [1, 2, 3, 4] is:", doubleArray([1, 2, 3, 4]));
+
 
 // 3. Function that takes one number as a parameter and returns its factorial.
 let factorial = function(n) {
@@ -29,14 +30,14 @@ let factorial = function(n) {
         factorial *= i;
     }
     return factorial;
-};
+}
 console.log("Factorial of 6:", factorial(6));
+
 
 // 4. Function processArray that takes an array and a callback function as parameters.
 function processArray(arr, callback) {
     return arr.map(callback);
 }
 let result = processArray([5, 6, 7, 8], function(num) {
-    return num * 2;
-    });
-console.log("Processed array of [5, 6, 7, 8] is:", result);
+    return num * 2;});
+console.log("processArray of [5, 6, 7, 8] is:", result);
