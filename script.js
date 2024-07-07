@@ -41,3 +41,12 @@ function processArray(arr, callback) {
 let result = processArray([5, 6, 7, 8], function(num) {
     return num * 2;});
 console.log("processArray of [5, 6, 7, 8] is:", result);
+
+
+
+//The console output should look like this:
+
+//Factorial of 5 = 5 * 4 * 3 * 2 * 1 = 120
+//doubleArray of [1, 2, 3, 4] is: [ 2, 4, 6, 8 ]
+//Factorial of 6: 720
+//processArray of [5, 6, 7, 8] is: [ 10, 12, 14, 16 ]
