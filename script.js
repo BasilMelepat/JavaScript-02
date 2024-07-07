@@ -1,91 +1,42 @@
-// Finding sum of two numbers.
-let num1 = Number(prompt("1. Enter the first number:")); 
-let num2 = Number(prompt("1. Enter the second number:"));
-let sum = num1+num2;
-console.log(`1. The sum of ${num1} and ${num2} is: ${sum}`);
-
-
-// Finding area of a rectangle.
-const length = Number(prompt("2. Enter the length of the rectangle:"));
-const width = Number(prompt("2. Enter the width of the rectangle:"));
-const area = length*width;
-console.log(`2. The area of the rectangle is ${area} square units.`);
-
-
-// Checking voting eligiblity based on age.
-let age = Number(prompt("3. Enter your age:"));
-if (age >= 18) {
-    console.log("3. You are eligible to vote.");
-    } else {
-    console.log("3. You are not eligible to vote.");
-}
-
-
-// Checking passed or failed based on grade.
-let grade = Number(prompt("4. Enter your grade percentage:"));
-if (grade >= 60) {
-    console.log("4. You passed.");
-    } else {
-    console.log("4. You failed.");
-}
-
-
-// Checking the number is positive, negative, or zero.
-let num = Number(prompt("5. Enter a number to check (+,-,0):"));
-if (num > 0) {
-    console.log("5. The number is positive.");
-    } else if (num < 0) {
-    console.log("5. The number is negative.");
-    } else {
-    console.log("5. The number is zero.");
-}
-
-
-// Checking the user is a child, teenager, adult, or senior based on age.
-let userAge = Number(prompt("6. Enter your age:")); 
-if (userAge>=0 && userAge<=12) {
-    console.log("6. You are a child.");
-    } else if (userAge>=13 && userAge<=19) {
-    console.log("6. You are a teenager.");
-    } else if (userAge>=20 && userAge<=59) {
-    console.log("6. You are an adult.");
-    } else if (userAge>=60) {
-    console.log("6. You are a senior.");
-    } else {
-    console.log("6. Invalid age entered.");
-}
-
-
-// Find the square of each number in an array using a loop.
-let input = prompt("7. Enter numbers separated by commas:");
-if (!input) {
-    alert("You didn't answer.. moving to next question");
+// 1. Function calculateFactorial (n).
+function calculateFactorial(n) {
+    if (n < 0) return "Factorial is not defined for negative numbers";
+    if (n === 0) return "Factorial of 0 = 1";
+    let factorial = 1;
+    let calculationProcess = n.toString();
+    for (let i = n; i > 1; i--) {
+        factorial *= i;
+        calculationProcess += " * " + (i - 1).toString();
     }
-    else {
-    // Spliting the input string into an array of numbers
-    let array = input.split(",");
-    // Checking if the input contains valid numbers
-    let isValid = array.every(input => !isNaN(input));
-    if(!isValid) {
-    alert("You entered invalid numbers!");
-    } 
-    else {
-    // Using let to define an array to store the squares
-    let result = new Array(array.length);
-    for(let i=0; i<array.length; i++) {
-    result[i] = array[i]*array[i];
-    }
-    console.log(`7. The squares of the numbers are: ${result.join(", ")}`);
-    }
+    calculationProcess += " = " + factorial.toString();
+    return "Factorial of " + n.toString() + " = " + calculationProcess;
 }
+console.log(calculateFactorial(5));
 
 
-// Program to find the sum of all the odd numbers for a given limit.
-let limit = Number(prompt("8. Enter the limit:"));
-let oddSum = 0;
-for (let i = 1; i <= limit; i++) {
-    if (i % 2 !== 0) {
-    oddSum += i;
+// 2. Function to a variable called doubleArray.
+const doubleArray = function(arr) {
+    return arr.map(num => num * 2);
+};
+console.log("Double [1, 2, 3, 4]:", doubleArray([1, 2, 3, 4]));
+
+// 3. Function that takes one number as a parameter and returns its factorial.
+let factorial = function(n) {
+    if (n < 0) return -1;
+    if (n === 0) return 1;
+    let factorial = 1;
+    for (let i = n; i > 0; i--) {
+        factorial *= i;
     }
+    return factorial;
+};
+console.log("Factorial of 6:", factorial(6));
+
+// 4. Function processArray that takes an array and a callback function as parameters.
+function processArray(arr, callback) {
+    return arr.map(callback);
 }
-console.log(`8. The sum of all odd numbers up to ${limit} is ${oddSum}.`);
+let result = processArray([5, 6, 7, 8], function(num) {
+    return num * 2;
+    });
+console.log("Processed array of [5, 6, 7, 8] is:", result);
